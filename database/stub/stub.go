@@ -1,12 +1,12 @@
 package stub
 
 import (
-	"go.uber.org/atomic"
 	"io"
 	"io/ioutil"
 	"reflect"
 
-	"github.com/golang-migrate/migrate/v4/database"
+	"github.com/getsynq/migrate/v4/database"
+	"go.uber.org/atomic"
 )
 
 func init() {
