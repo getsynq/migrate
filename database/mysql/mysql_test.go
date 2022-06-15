@@ -17,16 +17,19 @@ import (
 	"os"
 	"strconv"
 	"testing"
+)
 
+import (
 	"github.com/dhui/dktest"
-	"github.com/getsynq/migrate/v4"
 	"github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/assert"
+)
 
-	dt "github.com/getsynq/migrate/v4/database/testing"
-	"github.com/getsynq/migrate/v4/dktesting"
-
-	_ "github.com/getsynq/migrate/v4/source/file"
+import (
+	"github.com/golang-migrate/migrate/v4"
+	dt "github.com/golang-migrate/migrate/v4/database/testing"
+	"github.com/golang-migrate/migrate/v4/dktesting"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 )
 
 const defaultPort = 3306

@@ -3,17 +3,16 @@ package ql
 import (
 	"database/sql"
 	"fmt"
+	"github.com/hashicorp/go-multierror"
+	"go.uber.org/atomic"
 	"io"
 	"io/ioutil"
 	"strings"
 
-	"github.com/hashicorp/go-multierror"
-	"go.uber.org/atomic"
-
 	nurl "net/url"
 
-	"github.com/getsynq/migrate/v4"
-	"github.com/getsynq/migrate/v4/database"
+	"github.com/golang-migrate/migrate/v4"
+	"github.com/golang-migrate/migrate/v4/database"
 	_ "modernc.org/ql/driver"
 )
 
@@ -217,7 +216,7 @@ func (m *Ql) SetVersion(version int, dirty bool) error {
 
 	// Also re-write the schema version for nil dirty versions to prevent
 	// empty schema version for failed down migration on the first migration
-	// See: https://github.com/getsynq/migrate/issues/330
+	// See: https://github.com/golang-migrate/migrate/issues/330
 	if version >= 0 || (version == database.NilVersion && dirty) {
 		query := fmt.Sprintf(`INSERT INTO %s (version, dirty) VALUES (uint64(?1), ?2)`,
 			m.config.MigrationsTable)

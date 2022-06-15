@@ -7,22 +7,25 @@ import (
 
 	"log"
 
+	"github.com/golang-migrate/migrate/v4"
 	"io"
 	"os"
 	"strconv"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dhui/dktest"
-	"github.com/getsynq/migrate/v4"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+)
 
-	dt "github.com/getsynq/migrate/v4/database/testing"
-	"github.com/getsynq/migrate/v4/dktesting"
-
-	_ "github.com/getsynq/migrate/v4/source/file"
+import (
+	dt "github.com/golang-migrate/migrate/v4/database/testing"
+	"github.com/golang-migrate/migrate/v4/dktesting"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 )
 
 var (

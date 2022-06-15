@@ -3,21 +3,20 @@ package mongodb
 import (
 	"context"
 	"fmt"
-	"io"
-	"io/ioutil"
-	"net/url"
-	os "os"
-	"strconv"
-	"time"
-
 	"github.com/cenkalti/backoff/v4"
-	"github.com/getsynq/migrate/v4/database"
+	"github.com/golang-migrate/migrate/v4/database"
 	"github.com/hashicorp/go-multierror"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/x/mongo/driver/connstring"
 	"go.uber.org/atomic"
+	"io"
+	"io/ioutil"
+	"net/url"
+	os "os"
+	"strconv"
+	"time"
 )
 
 func init() {

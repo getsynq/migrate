@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/getsynq/migrate/v4"
+	"github.com/golang-migrate/migrate/v4"
 
-	dt "github.com/getsynq/migrate/v4/database/testing"
-	_ "github.com/getsynq/migrate/v4/source/file"
+	dt "github.com/golang-migrate/migrate/v4/database/testing"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 
 	"cloud.google.com/go/spanner/spannertest"
 	"github.com/stretchr/testify/assert"

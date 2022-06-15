@@ -1,4 +1,4 @@
-module github.com/getsynq/migrate/v4
+module github.com/golang-migrate/migrate/v4
 
 require (
 	cloud.google.com/go v0.99.0 // indirect
@@ -44,6 +44,7 @@ require (
 	github.com/ktrysmt/go-bitbucket v0.6.4
 	github.com/lib/pq v1.10.0
 	github.com/markbates/pkger v0.15.1
+	github.com/mattn/go-sqlite3 v1.14.10
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
 	github.com/mutecomm/go-sqlcipher/v4 v4.4.0
 	github.com/nakagami/firebirdsql v0.0.0-20190310045651-3c02a58cfed8
@@ -70,10 +71,9 @@ require (
 	modernc.org/golex v1.0.0 // indirect
 	modernc.org/internal v1.0.0 // indirect
 	modernc.org/lldb v1.0.0 // indirect
-	modernc.org/mathutil v1.2.2 // indirect
 	modernc.org/ql v1.0.0
 	modernc.org/sortutil v1.1.0 // indirect
-	modernc.org/strutil v1.1.0 // indirect
+	modernc.org/sqlite v1.10.6
 	modernc.org/zappy v1.0.0 // indirect
 )
 
